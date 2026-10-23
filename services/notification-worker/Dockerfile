@@ -12,7 +12,7 @@ RUN pip install -r /src/requirements.txt
 # Stage 2: slim runtime with only the virtualenv and the app code, running as a non root user
 FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PATH="/venv/bin:$PATH" SERVICE_NAME=notification-worker
-RUN useradd --create-home --uid 10001 app
+RUN useradd --create-home --uid 10001 app && mkdir -p /data/documents && chown app:app /data/documents
 COPY --from=build /venv /venv
 WORKDIR /app
 COPY notification-worker/app ./app
