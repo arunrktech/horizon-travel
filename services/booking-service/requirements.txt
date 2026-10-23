@@ -1,0 +1,3 @@
+# Shared library is installed from ../common by the Dockerfile
+email-validator==2.2.0
+stripe==11.4.1

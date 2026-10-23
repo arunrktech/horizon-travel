@@ -1,0 +1,2 @@
+# Shared library is installed from ../common by the Dockerfile
+cryptography==44.0.0

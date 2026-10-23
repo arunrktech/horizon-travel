@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horizon-common"
+version = "1.0.0"
+description = "Shared building blocks for the Horizon Travel microservices: config, auth, errors, database, events, storage."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.115.6",
+  "uvicorn[standard]==0.32.1",
+  "pydantic==2.10.4",
+  "pydantic-settings==2.7.0",
+  "sqlalchemy==2.0.36",
+  "psycopg[binary]==3.2.3",
+  "redis==5.2.1",
+  "boto3==1.35.90",
+  "pyjwt[crypto]==2.10.1",
+  "httpx==0.28.1",
+]
+
+[tool.setuptools]
+packages = ["horizon_common"]

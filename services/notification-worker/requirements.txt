@@ -1,0 +1,2 @@
+# Shared library is installed from ../common by the Dockerfile
+reportlab==4.2.5
